@@ -90,7 +90,7 @@ describe('NgPackagr Builder', () => {
         tap((buildEvent) => expect(buildEvent.success).toBe(true)),
         debounceTime(1000),
         map(() => {
-          const fileName = './dist/lib/fesm2015/lib.js';
+          const fileName = './dist/lib/fesm2015/lib.mjs';
           const content = virtualFs.fileBufferToString(host.scopedSync().read(normalize(fileName)));
 
           return content;
